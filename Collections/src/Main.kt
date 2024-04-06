@@ -1,14 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, $name!")
+fun main(args: Array<String>) {
+    // a estrutura de lista aumenta ou encolhe conforme adicionamos e removemos itens
+    val names = listOf<String>("Hermeson", "Bastos")
+    println(names[0])
+    println(names);
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
-    }
+    // uma lista mutável nos permite adicionar e remover itens
+    val namesMutable = mutableListOf("Hermeson", "Bastos")
+
+    // adicionando um elemento
+    namesMutable.add("Maia")
+
+    // removendo elemento espescífico
+    namesMutable.remove("Hermeson")
+    // removento elemento por índice
+    namesMutable.removeAt(1)
+
+    // percorrendo uma lista elemento por elemento
+    namesMutable.forEach { println(it) }
+
+    // um set não permite elementos duplicados na mesma lista
+    // não é possível adicionar ou remover elementos
+    val namesSet = setOf("Hermeson", "Bastos", "Hermeson");
+    namesSet.forEach{ println(it) }
 }
